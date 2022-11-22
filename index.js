@@ -80,7 +80,7 @@ database
 
 //database.raw(" aqui pode ser passado qualquer codigo sql");
 
-database
+/* database
   .raw("select * from games")
   .then((data) => {
     console.log(data);
@@ -88,3 +88,16 @@ database
   .catch((erro) => {
     console.log(erro);
   });
+ */
+
+/* database
+  .where({ id: 9 })
+  .delete()
+  .table("games")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((erro) => {
+    console.log(erro);
+  });
+ */
