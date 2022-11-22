@@ -2,7 +2,7 @@ let database = require("./database");
 
 //insert comando para inserir dados no banco de dados!;
 
-let dados = [
+/* let dados = [
   {
     nome: "terraria",
     preco: 10.1,
@@ -26,3 +26,37 @@ database
   .catch((erro) => {
     console.log(erro);
   });
+ */
+
+//consultando dados;
+
+/* database
+  .select(["id", "preco"])
+  .table("games")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((erro) => {
+    console.log(erro);
+  }); */
+
+/* varias consultas
+
+database
+  .insert({ nome: "lord of the rings", preco: 334 })
+  .into("games")
+  .then((data) => {
+    database
+      .select(["id", "nome"])
+      .table("games")
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((erro) => {
+        console.log(erro);
+      });
+  })
+  .catch((erro) => {
+    console.log(erro);
+  });
+ */
