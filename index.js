@@ -60,3 +60,20 @@ database
     console.log(erro);
   });
  */
+
+//where condições em consultas;
+
+/* database
+  .select()
+  .whereRaw("nome = 'lord of the rings' OR preco < 50")
+  .table("games")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((erro) => {
+    console.log(erro);
+  }); */
+
+//where
+// ou = .orWhere({ id: 2 })
+// escrevendo diretamente a query //whereRow("preco > 40");
