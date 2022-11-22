@@ -1,5 +1,5 @@
 const knex = require("knex")({
-  client: "mysql2",
+  client: "mysql",
   connection: {
     host: "127.0.0.1",
     port: 3306,
@@ -8,3 +8,5 @@ const knex = require("knex")({
     database: "knex",
   },
 });
+
+module.exports = knex;
