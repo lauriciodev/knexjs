@@ -77,3 +77,14 @@ database
 //where
 // ou = .orWhere({ id: 2 })
 // escrevendo diretamente a query //whereRow("preco > 40");
+
+//database.raw(" aqui pode ser passado qualquer codigo sql");
+
+database
+  .raw("select * from games")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((erro) => {
+    console.log(erro);
+  });
