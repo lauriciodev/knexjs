@@ -118,3 +118,15 @@ database
  */
 
 //manipulando a ordem das consultas de  dados
+
+/* database
+  .select()
+  .table("games")
+  .orderBy("nome", "asc")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((erro) => {
+    console.log(erro);
+  });
+ */
