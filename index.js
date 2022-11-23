@@ -130,3 +130,19 @@ database
     console.log(erro);
   });
  */
+
+/* 
+consultando dados associados.
+
+  database
+  .insert({
+    nome: "unreal",
+    game_id: 7,
+  })
+  .table("estudios")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((erro) => {
+    console.log(erro);
+  }); */
