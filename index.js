@@ -101,3 +101,20 @@ database
     console.log(erro);
   });
  */
+
+/* 
+atualizando dados
+
+database
+  .where({ id: 2 })
+  .update({ nome: "god of war ghost of sparta" })
+  .table("games")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((erro) => {
+    console.log(erro);
+  });
+ */
+
+//manipulando a ordem das consultas de  dados
