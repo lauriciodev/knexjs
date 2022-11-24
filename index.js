@@ -151,16 +151,18 @@ consultando dados associados.
 
 database
   .select([
-    "games.id",
+    "games.id as game_id",
     "estudios.id as estudio_id",
     "games.nome as game_nome",
     "estudios.nome as estudio_nome",
   ])
   .table("games")
-  .innerJoin("estudios", "estudios.game_id", "game_id")
+  .innerJoin("estudios", "estudios.game_id", "games.id")
   .then((data) => {
     console.log(data);
   })
   .catch((erro) => {
     console.log(erro);
   });
+
+//dentro do join passe "nome da tabela que tem conexão" ,"campo nessa tabela que tem conexão" e "campo na primeira tabela que tem conexão" ;
