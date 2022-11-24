@@ -146,3 +146,21 @@ consultando dados associados.
   .catch((erro) => {
     console.log(erro);
   }); */
+
+//innerJoin juntando tabelas em consultas
+
+database
+  .select([
+    "games.id",
+    "estudios.id as estudio_id",
+    "games.nome as game_nome",
+    "estudios.nome as estudio_nome",
+  ])
+  .table("games")
+  .innerJoin("estudios", "estudios.game_id", "game_id")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((erro) => {
+    console.log(erro);
+  });
