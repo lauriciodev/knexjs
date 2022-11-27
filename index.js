@@ -160,11 +160,15 @@ database
   .innerJoin("estudios", "estudios.game_id", "games.id")
   .where("games.id", 5)
   .then((data) => {
+    let game = { id: 0, nome: "", estudios: [] };
+
+    game.id = data[0].game_id;
+    game.nome = data[0].game_nome;
     data.forEach((est) => {
-      console.log(est.game_nome);
-      console.log(est.estudio_nome);
+      game.estudios.push({ estudios: est.estudio_nome });
     });
-    console.log(estudios);
+
+    console.log(game);
   })
   .catch((erro) => {
     console.log(erro);
