@@ -158,9 +158,13 @@ database
   ])
   .table("games")
   .innerJoin("estudios", "estudios.game_id", "games.id")
-  .where("games.id", 7)
+  .where("games.id", 5)
   .then((data) => {
-    console.log(data);
+    data.forEach((est) => {
+      console.log(est.game_nome);
+      console.log(est.estudio_nome);
+    });
+    console.log(estudios);
   })
   .catch((erro) => {
     console.log(erro);
